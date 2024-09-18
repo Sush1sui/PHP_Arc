@@ -20,10 +20,10 @@ foreach ($business['categories'] as $category) {
 
 function register($user)
 {
-    // Create the user record in the db
-    // Log them in
-    // Send a welcome email
-    // redirect to their new dashboard
+    // Create the user record in the db.
+    // Log them in.
+    // Send a welcome email.
+    // redirect to their new dashboard.
 }
 
 require('index.view.php');
