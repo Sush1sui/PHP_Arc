@@ -1,10 +1,15 @@
 <?php
 
-require('./functions.php');
+require 'functions.php';
 
-$baseURL = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+$uri = $_SERVER['REQUEST_URI'];
 
-$header = 'Homepage';
+// dd($uri);
 
-
-require('./views/index.view.php');
+if ($uri === '/') {
+    require('./controllers/index.php');
+} else if ($uri === '/about') {
+    require('./controllers/about.php');
+} else if ($uri === '/contact') {
+    require('./controllers/contact.php');
+}
